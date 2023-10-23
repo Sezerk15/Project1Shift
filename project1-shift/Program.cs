@@ -8,6 +8,15 @@ string firstRow = "     ";
 string secondRow = "     ";
 string thirdRow = "     ";
 short boardScore = 0;
+short AA;
+short AB;
+short AC;
+short BA;
+short BB;
+short BC;
+short CA;
+short CB;
+short CC;
 short playerScore = 0;
 int computerScore = 0;
 string unusedDigits = "1 2 3 4 5 6 7 8 9";
@@ -17,9 +26,9 @@ Console.WriteLine("------------------ Round 0 ------------------\n");
 
 Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
 Console.WriteLine($"  + - - - +                                         {unusedDigits}");
-Console.WriteLine($"1 | {firstRow} |        Board Score    : {boardScore}        ");
-Console.WriteLine($"2 | {secondRow} |                                 ");
-Console.WriteLine($"3 | {thirdRow} |        Player Score   : {playerScore}        ");
+Console.WriteLine($"1 |       |        Board Score    : {boardScore}        ");
+Console.WriteLine($"2 |       |                                 ");
+Console.WriteLine($"3 |       |        Player Score   : {playerScore}        ");
 Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
 Console.WriteLine("                                                  ");
 Console.WriteLine("Selected digit :                                   ");
@@ -27,13 +36,14 @@ Console.WriteLine("Selected digit :                                   ");
 
 string userInput;
 short inputCounter = 0;
-string boardTotal = "";
 string tempString;
 bool included;
+short userInputShort;
 do
 {
     Console.SetCursorPosition(17, 9);
     userInput = Console.ReadLine();
+    userInputShort = Convert.ToInt16(userInput);
     switch (userInput)
     {
         case "1":
@@ -46,14 +56,17 @@ do
         case "8":
         case "9":
             included = false;
-            for (int i = 0; i < boardTotal.Length; i++)
-                if (boardTotal[i] == Convert.ToChar(userInput))
-                {
-                    included = true;
-                }
+            if (AA == userInputShort) included = true;
+            if (AB == userInputShort) included = true;
+            if (AC == userInputShort) included = true;
+            if (BA == userInputShort) included = true;
+            if (BB == userInputShort) included = true;
+            if (BC == userInputShort) included = true;
+            if (CA == userInputShort) included = true;
+            if (CB == userInputShort) included = true;
+            if (CC == userInputShort) included = true;
             if (!included)
             {
-                boardTotal += userInput;
                 inputCounter++;
                 tempString = "";
                 for (int i = 0; i < 2 * Convert.ToInt16(userInput) - 2;i++)
@@ -74,31 +87,31 @@ do
     switch (inputCounter)
     {
         case 1:
-            firstRow = String.Format("{0}    ", boardTotal[0]);
+            AA = userInputShort;
             break;
         case 2:
-            firstRow = String.Format("{0} {1}  ", boardTotal[0], boardTotal[1]);
+            AB = userInputShort;
             break;
         case 3:
-            firstRow = String.Format("{0} {1} {2}", boardTotal[0], boardTotal[1], boardTotal[2]);
+            AC = userInputShort;
             break;
         case 4:
-            secondRow = String.Format("{0}    ", boardTotal[3]);
+            BA = userInputShort;
             break;
         case 5:
-            secondRow = String.Format("{0} {1}  ", boardTotal[3], boardTotal[4]);
+            BB = userInputShort;
             break;
         case 6:
-            secondRow = String.Format("{0} {1} {2}", boardTotal[3], boardTotal[4], boardTotal[5]);
+            BC = userInputShort;
             break;
         case 7:
-            thirdRow = String.Format("{0}    ", boardTotal[6]);
+            CA = userInputShort;
             break;
         case 8:
-            thirdRow = String.Format("{0} {1}  ", boardTotal[6], boardTotal[7]);
+            CB = userInputShort;
             break;
         case 9:
-            thirdRow = String.Format("{0} {1} {2}", boardTotal[6], boardTotal[7], boardTotal[8]);
+            CC = userInputShort;
             gameStart = true;
             break;
         case 0:
@@ -110,9 +123,9 @@ do
 
     Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
     Console.WriteLine($"  + - - - +                                         {unusedDigits}");
-    Console.WriteLine($"1 | {firstRow} |        Board Score    : {boardScore}        ");
-    Console.WriteLine($"2 | {secondRow} |                                 ");
-    Console.WriteLine($"3 | {thirdRow} |        Player Score   : {playerScore}        ");
+    Console.WriteLine($"1 | {AA} {AB} {AC} |        Board Score    : {boardScore}        ");
+    Console.WriteLine($"2 | {BA} {BB} {BC} |                                 ");
+    Console.WriteLine($"3 | {CA} {CB} {CC} |        Player Score   : {playerScore}        ");
     Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
     Console.WriteLine("                                                  ");
     Console.WriteLine("Selected digit :                                   ");
@@ -120,44 +133,14 @@ do
 
 } while (gameStart == false);
 
-int currentScore = 0;
-for (int i = 0; i < 9; i += 3)
-{
-    if (Math.Abs(Convert.ToInt16(boardTotal[i].ToString()) - Convert.ToInt16(boardTotal[i+1].ToString())) == 1 &&
-    Math.Abs(Convert.ToInt16(boardTotal[i+1].ToString()) - Convert.ToInt16(boardTotal[i+2].ToString())) == 1)
-    {
-        currentScore++;
-    }
-}
-for (int i = 0; i < 3; i ++)
-{
-    if (Math.Abs(Convert.ToInt16(boardTotal[i].ToString()) - Convert.ToInt16(boardTotal[i + 3].ToString())) == 1 &&
-    Math.Abs(Convert.ToInt16(boardTotal[i + 3].ToString()) - Convert.ToInt16(boardTotal[i + 6].ToString())) == 1)
-    {
-        currentScore++;
-    }
-}
-if (Math.Abs(Convert.ToInt16(boardTotal[0].ToString()) - Convert.ToInt16(boardTotal[4].ToString())) == 1 &&
-    Math.Abs(Convert.ToInt16(boardTotal[4].ToString()) - Convert.ToInt16(boardTotal[8].ToString())) == 1)
-{
-    currentScore++;
-}
-if (Math.Abs(Convert.ToInt16(boardTotal[2].ToString()) - Convert.ToInt16(boardTotal[4].ToString())) == 1 &&
-    Math.Abs(Convert.ToInt16(boardTotal[4].ToString()) - Convert.ToInt16(boardTotal[6].ToString())) == 1)
-{
-    currentScore++;
-}
-currentScore = currentScore * currentScore;
-boardScore = Convert.ToInt16(currentScore);
-
 Console.Clear();
 Console.WriteLine("------------------ Round 0 ------------------\n");
 
 Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
 Console.WriteLine($"  + - - - +                                         {unusedDigits}");
-Console.WriteLine($"1 | {firstRow} |        Board Score    : {boardScore}        ");
-Console.WriteLine($"2 | {secondRow} |                                 ");
-Console.WriteLine($"3 | {thirdRow} |        Player Score   : {playerScore}        ");
+Console.WriteLine($"1 | {AA} {AB} {AC} |        Board Score    : {boardScore}        ");
+Console.WriteLine($"2 | {BA} {BB} {BC} |                                 ");
+Console.WriteLine($"3 | {CA} {CB} {CC} |        Player Score   : {playerScore}        ");
 Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
 Console.WriteLine("                                                  ");
 Console.WriteLine("Selected digit :                                   ");
