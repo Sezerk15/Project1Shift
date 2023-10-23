@@ -1,7 +1,5 @@
 ﻿
 
-
-
 int turnCounter = 0;
 string turnName = "Initiator";
 string firstRow = "     ";

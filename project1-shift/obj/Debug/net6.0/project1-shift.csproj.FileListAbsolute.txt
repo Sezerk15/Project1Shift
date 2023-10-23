@@ -26,3 +26,17 @@ C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.
 C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.pdb
 C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.genruntimeconfig.cache
 C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\ref\project1-shift.dll
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.exe
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.deps.json
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.runtimeconfig.json
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.dll
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.pdb
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfoInputs.cache
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfo.cs
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.csproj.CoreCompileInputs.cache
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.dll
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\refint\project1-shift.dll
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.pdb
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.genruntimeconfig.cache
+C:\Users\berda\OneDrive\Belgeler\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\ref\project1-shift.dll
