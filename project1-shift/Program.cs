@@ -28,6 +28,7 @@ Console.WriteLine("Selected digit :                                   ");
 string userInput;
 short inputCounter = 0;
 string boardTotal = "";
+string tempString;
 do
 {
     Console.SetCursorPosition(17, 9);
@@ -46,7 +47,7 @@ do
             if (!boardTotal.Contains(userInput)) { 
                 boardTotal += userInput;
                 inputCounter++;
-                unusedDigits = unusedDigits.Replace(Convert.ToChar(userInput),'X');
+                
             }
 
             break;
