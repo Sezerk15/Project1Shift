@@ -12,17 +12,17 @@ C:\Users\Sezer\source\repos\project1-shift\project1-shift\obj\Debug\net6.0\refin
 C:\Users\Sezer\source\repos\project1-shift\project1-shift\obj\Debug\net6.0\project1-shift.pdb
 C:\Users\Sezer\source\repos\project1-shift\project1-shift\obj\Debug\net6.0\project1-shift.genruntimeconfig.cache
 C:\Users\Sezer\source\repos\project1-shift\project1-shift\obj\Debug\net6.0\ref\project1-shift.dll
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.exe
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.deps.json
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.runtimeconfig.json
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.dll
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.pdb
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfoInputs.cache
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfo.cs
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.csproj.CoreCompileInputs.cache
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.dll
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\refint\project1-shift.dll
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.pdb
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.genruntimeconfig.cache
-C:\Users\planermarossa\Source\Repos\Sezerk15\Project1Shift\project1-shift\obj\Debug\net6.0\ref\project1-shift.dll
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.exe
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.deps.json
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.runtimeconfig.json
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.dll
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\bin\Debug\net6.0\project1-shift.pdb
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfoInputs.cache
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.AssemblyInfo.cs
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.csproj.CoreCompileInputs.cache
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.dll
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\refint\project1-shift.dll
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.pdb
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\project1-shift.genruntimeconfig.cache
+C:\Users\Sezer Uni\Documents\GitHub\Project1Shift\project1-shift\obj\Debug\net6.0\ref\project1-shift.dll
