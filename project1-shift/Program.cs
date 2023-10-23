@@ -29,6 +29,7 @@ string userInput;
 short inputCounter = 0;
 string boardTotal = "";
 string tempString;
+bool included;
 do
 {
     Console.SetCursorPosition(17, 9);
@@ -44,11 +45,26 @@ do
         case "7":
         case "8":
         case "9":
-            if (!boardTotal.Contains(userInput)) { 
+            included = false;
+            for (int i = 0; i < boardTotal.Length; i++)
+                if (boardTotal[i] == Convert.ToChar(userInput))
+                {
+                    included = true;
+                }
+            if (!included)
+            {
                 boardTotal += userInput;
                 inputCounter++;
+                tempString = "";
+                for (int i = 0; i < 2 * Convert.ToInt16(userInput) - 2;i++)
+                    tempString += unusedDigits[i];
+                tempString += 'X';
+                for (int i = 2 * Convert.ToInt16(userInput) - 1; i < unusedDigits.Length; i++)
+                    tempString += unusedDigits[i];
+                unusedDigits = tempString;
                 
             }
+
 
             break;
         default: 
@@ -90,7 +106,7 @@ do
             break;
     }
     Console.Clear();
-    Console.WriteLine("------------------ Round {0} ------------------\n");
+    Console.WriteLine("------------------ Round 0 ------------------\n");
 
     Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
     Console.WriteLine($"  + - - - +                                         {unusedDigits}");
