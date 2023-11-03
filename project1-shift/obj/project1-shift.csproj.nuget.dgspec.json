@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Sezer Uni\\Documents\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj": {}
+    "C:\\Users\\berda\\OneDrive\\Belgeler\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Sezer Uni\\Documents\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj": {
+    "C:\\Users\\berda\\OneDrive\\Belgeler\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Sezer Uni\\Documents\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj",
+        "projectUniqueName": "C:\\Users\\berda\\OneDrive\\Belgeler\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj",
         "projectName": "project1-shift",
-        "projectPath": "C:\\Users\\Sezer Uni\\Documents\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj",
-        "packagesPath": "C:\\Users\\Sezer Uni\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Sezer Uni\\Documents\\GitHub\\Project1Shift\\project1-shift\\obj\\",
+        "projectPath": "C:\\Users\\berda\\OneDrive\\Belgeler\\GitHub\\Project1Shift\\project1-shift\\project1-shift.csproj",
+        "packagesPath": "C:\\Users\\berda\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\berda\\OneDrive\\Belgeler\\GitHub\\Project1Shift\\project1-shift\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Sezer Uni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\berda\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
