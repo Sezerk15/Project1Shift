@@ -1,7 +1,12 @@
-﻿
-
+﻿using System.Media;
 
 bool playAgain = true;
+
+// Ses Oynatıcısı
+SoundPlayer sp = new SoundPlayer("D:\\cs\\csharp\\proje1\\proje1\\soundeffect.wav");
+sp.Load();
+
+
 //GAMEEE
 while (playAgain)
 {
@@ -840,9 +845,6 @@ while (playAgain)
 
     } while (roundCount < 5);
     
-    
-
-
 
     bool isSelected = false;
     bool selectedButton = true;
@@ -874,18 +876,20 @@ while (playAgain)
         switch (ch)
         {
             case ConsoleKey.LeftArrow:
+                sp.Play();
                 selectedButton = true;
                 
                 break;
             case ConsoleKey.RightArrow:
+                sp.Play();
                 selectedButton = false;
                 break;
             case ConsoleKey.Enter:
                 isSelected = true;
+                playAgain = !selectedButton;
                 break;
         }
     }
     Console.CursorVisible = true;
 
-    playAgain = false;
 }
