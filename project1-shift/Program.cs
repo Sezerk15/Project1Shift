@@ -882,10 +882,9 @@ while (playAgain)
                 break;
             case ConsoleKey.Enter:
                 isSelected = true;
+                playAgain = !selectedButton;
                 break;
         }
     }
     Console.CursorVisible = true;
-
-    playAgain = false;
 }
