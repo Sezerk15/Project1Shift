@@ -10,9 +10,6 @@ while (playAgain)
     int roundCount = 0;
     int turnCounter = 0;
     string turnName = "Initiator";
-    string firstRow = "     ";
-    string secondRow = "     ";
-    string thirdRow = "     ";
     int boardScore = 0;
     int AA = 0;
     int AB = 0;
@@ -30,13 +27,13 @@ while (playAgain)
 
 
     //BAŞLAMA
+    Console.Clear();
     Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-
     Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
     Console.WriteLine($"  + - - - +                                         {unusedDigits}");
-    Console.WriteLine($"1 |       |        Board Score    : {boardScore}        ");
-    Console.WriteLine($"2 |       |                                 ");
-    Console.WriteLine($"3 |       |        Player Score   : {playerScore}        ");
+    Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
+    Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
+    Console.WriteLine($"3 | {(CA != 0 ? CA : " ")} {(CB != 0 ? CB : " ")} {(CC != 0 ? CC : " ")} |        Player Score   : {playerScore}        ");
     Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
     Console.WriteLine("                                                  ");
     Console.WriteLine("Selected digit :                                   ");
@@ -87,39 +84,30 @@ while (playAgain)
                     {
                         case 1:
                             AA = userInputByte;
-                            firstRow = AA + "    ";
                             break;
                         case 2:
                             AB = userInputByte;
-                            firstRow = AA + " " + AB + "  ";
                             break;
                         case 3:
                             AC = userInputByte;
-                            firstRow = AA + " " + AB + " " + AC;
                             break;
                         case 4:
                             BA = userInputByte;
-                            secondRow = BA + "    ";
                             break;
                         case 5:
                             BB = userInputByte;
-                            secondRow = BA + " " + BB + "  ";
                             break;
                         case 6:
                             BC = userInputByte;
-                            secondRow = BA + " " + BB + " " + BC;
                             break;
                         case 7:
                             CA = userInputByte;
-                            thirdRow = CA + "    ";
                             break;
                         case 8:
                             CB = userInputByte;
-                            thirdRow = CA + " " + CB + "  ";
                             break;
                         case 9:
                             CC = userInputByte;
-                            thirdRow = CA + " " + CB + " " + CC;
                             gameStart = true;
                             break;
                         default:
@@ -137,12 +125,11 @@ while (playAgain)
 
         Console.Clear();
         Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-
         Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
         Console.WriteLine($"  + - - - +                                         {unusedDigits}");
-        Console.WriteLine($"1 | {firstRow} |        Board Score    : {boardScore}        ");
-        Console.WriteLine($"2 | {secondRow} |                                 ");
-        Console.WriteLine($"3 | {thirdRow} |        Player Score   : {playerScore}        ");
+        Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
+        Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
+        Console.WriteLine($"3 | {(CA != 0 ? CA : " ")} {(CB != 0 ? CB : " ")} {(CC != 0 ? CC : " ")} |        Player Score   : {playerScore}        ");
         Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
         Console.WriteLine("                                                  ");
         Console.WriteLine("Selected digit :                                   ");
@@ -297,45 +284,45 @@ while (playAgain)
                 switch (stringInput)
                 {
                     case "1":
-                        temp = AA;
-                        AA = AB;
-                        AB = AC;
-                        AC = temp;
+                        temp = AC;
+                        AC = AB;
+                        AB = AA;
+                        AA = temp;
                         playerMoved = true;
                         break;
                     case "2":
-                        temp = BA;
-                        BA = BB;
-                        BB = BC;
-                        BC = temp;
+                        temp = BC;
+                        BC = BB;
+                        BB = BA;
+                        BA = temp;
                         playerMoved = true;
                         break;
                     case "3":
-                        temp = CA;
-                        CA = CB;
-                        CB = CC;
-                        CC = temp;
-                        playerMoved = true;
-                        break;
-                    case "4":
-                        temp = AA;
-                        AA = BA;
-                        BA = CA;
+                        temp = CC;
+                        CC = CB;
+                        CB = CA;
                         CA = temp;
                         playerMoved = true;
                         break;
+                    case "4":
+                        temp = CA;
+                        CA = BA;
+                        BA = AA;
+                        AA = temp;
+                        playerMoved = true;
+                        break;
                     case "5":
-                        temp = AB;
-                        AB = BB;
-                        BB = CB;
-                        CB = temp;
+                        temp = CB;
+                        CB = BB;
+                        BB = AB;
+                        AB = temp;
                         playerMoved = true;
                         break;
                     case "6":
-                        temp = AC;
-                        AC = BC;
-                        BC = CC;
-                        CC = temp;
+                        temp = CC;
+                        CC = BC;
+                        BC = AC;
+                        AC = temp;
                         playerMoved = true;
                         break;
                 }
@@ -383,14 +370,26 @@ while (playAgain)
 
             if (getPoint && boardScore > 0)
             {
-                playerScore = boardScore;
+                playerScore += boardScore;
                 break;
             }
-
+            
+            Console.Clear();
+            Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
+            Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}            ");
+            Console.WriteLine($"  + - - - +                                       ");
+            Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
+            Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
+            Console.WriteLine($"3 | {(CA != 0 ? CA : " ")} {(CB != 0 ? CB : " ")} {(CC != 0 ? CC : " ")} |        Player Score   : {playerScore}        ");
+            Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
+            Console.WriteLine("                                                  ");
+            Console.WriteLine("End of player turn. Press any key to continue.        ");
+            Console.ReadKey();
+            turnCounter++;
 
 
             //BILGISAYAR SIRASI
-            turnName = "Conputer";
+            turnName = "Computer";
 
 
             //BILGISAYAR HAMLE SEÇMESİ
@@ -402,9 +401,9 @@ while (playAgain)
 
 
             //Command 1
-            int tempAA = AB;
-            int tempAB = AC;
-            int tempAC = AA;
+            int tempAA = AC;
+            int tempAB = AA;
+            int tempAC = AB;
             int tempBA = BA;
             int tempBB = BB;
             int tempBC = BC;
@@ -459,9 +458,9 @@ while (playAgain)
             tempAA = AA;
             tempAB = AB;
             tempAC = AC;
-            tempBA = BB;
-            tempBB = BC;
-            tempBC = BA;
+            tempBA = BC;
+            tempBB = BA;
+            tempBC = BB;
             tempCA = CA;
             tempCB = CB;
             tempCC = CC;
@@ -516,9 +515,9 @@ while (playAgain)
             tempBA = BA;
             tempBB = BB;
             tempBC = BC;
-            tempCA = CB;
-            tempCB = CC;
-            tempCC = CA;
+            tempCA = CC;
+            tempCB = CA;
+            tempCC = CB;
             tempPoint = 0;
             if ((tempAA == tempAB + 1 && tempAB == tempAC + 1) || (tempAC == tempAB + 1 && tempAB == tempAA + 1))//checks first row//
             {
@@ -565,13 +564,13 @@ while (playAgain)
             }
 
             //Command 4
-            tempAA = BA;
+            tempAA = CA;
             tempAB = AB;
             tempAC = AC;
-            tempBA = CA;
+            tempBA = AA;
             tempBB = BB;
             tempBC = BC;
-            tempCA = AA;
+            tempCA = BA;
             tempCB = CB;
             tempCC = CC;
             tempPoint = 0;
@@ -620,13 +619,13 @@ while (playAgain)
 
             //Command 5
             tempAA = AA;
-            tempAB = BB;
+            tempAB = CB;
             tempAC = AC;
             tempBA = BA;
-            tempBB = CB;
+            tempBB = AB;
             tempBC = BC;
             tempCA = CA;
-            tempCB = AB;
+            tempCB = BB;
             tempCC = CC;
             tempPoint = 0;
             if ((tempAA == tempAB + 1 && tempAB == tempAC + 1) || (tempAC == tempAB + 1 && tempAB == tempAA + 1))//checks first row//
@@ -674,13 +673,13 @@ while (playAgain)
             //Command 6
             tempAA = AA;
             tempAB = AB;
-            tempAC = BC;
+            tempAC = CC;
             tempBA = BA;
             tempBB = BB;
-            tempBC = CC;
+            tempBC = AC;
             tempCA = CA;
             tempCB = CB;
-            tempCC = AC;
+            tempCC = BC;
             tempPoint = 0;
             if ((tempAA == tempAB + 1 && tempAB == tempAC + 1) || (tempAC == tempAB + 1 && tempAB == tempAA + 1))//checks first row//
             {
@@ -734,46 +733,46 @@ while (playAgain)
             switch (getPoint ? aIMoveMaxPoint : aIMoveMinPoint)
             {
                 case "1":
-                    tempt = AA;
-                    AA = AB;
-                    AB = AC;
-                    AC = tempt;
-
+                    tempt = AC;
+                    AC = AB;
+                    AB = AA;
+                    AA = tempt;
+                    playerMoved = true;
                     break;
                 case "2":
-                    tempt = BA;
-                    BA = BB;
-                    BB = BC;
-                    BC = tempt;
-
+                    tempt = BC;
+                    BC = BB;
+                    BB = BA;
+                    BA = tempt;
+                    playerMoved = true;
                     break;
                 case "3":
-                    tempt = CA;
-                    CA = CB;
-                    CB = CC;
-                    CC = tempt;
-
+                    tempt = CC;
+                    CC = CB;
+                    CB = CA;
+                    CA = tempt;
+                    playerMoved = true;
                     break;
                 case "4":
-                    tempt = AA;
-                    AA = BA;
-                    BA = CA;
-                    CA = tempt;
-
+                    tempt = CA;
+                    CA = BA;
+                    BA = AA;
+                    AA = tempt;
+                    playerMoved = true;
                     break;
                 case "5":
-                    tempt = AB;
-                    AB = BB;
-                    BB = CB;
-                    CB = tempt;
-
+                    tempt = CB;
+                    CB = BB;
+                    BB = AB;
+                    AB = tempt;
+                    playerMoved = true;
                     break;
                 case "6":
-                    tempt = AC;
-                    AC = BC;
-                    BC = CC;
-                    CC = tempt;
-
+                    tempt = CC;
+                    CC = BC;
+                    BC = AC;
+                    AC = tempt;
+                    playerMoved = true;
                     break;
             }
 
@@ -819,10 +818,22 @@ while (playAgain)
 
             if (getPoint && boardScore > 0)
             {
-                computerScore = boardScore;
+                computerScore += boardScore;
                 break;
             }
-
+            
+            Console.Clear();
+            Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
+            Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}             ");
+            Console.WriteLine($"  + - - - +                                         ");
+            Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
+            Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
+            Console.WriteLine($"3 | {(CA != 0 ? CA : " ")} {(CB != 0 ? CB : " ")} {(CC != 0 ? CC : " ")} |        Player Score   : {playerScore}        ");
+            Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
+            Console.WriteLine("                                                  ");
+            Console.WriteLine("End of computer turn. Press any key to continue.                                  ");
+            Console.ReadKey();
+            turnCounter++;
         }
 
 
@@ -835,8 +846,8 @@ while (playAgain)
         Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
         Console.WriteLine($"3 | {(CA != 0 ? CA : " ")} {(CB != 0 ? CB : " ")} {(CC != 0 ? CC : " ")} |        Player Score   : {playerScore}        ");
         Console.WriteLine($"  + - - - +        Computer Score : {computerScore}         ");
-        Console.WriteLine(value: "                                                  ");
-
+        Console.WriteLine("End of round. Press any key to continue.                                                  ");
+        Console.ReadKey();
 
     } while (roundCount < 5);
     
