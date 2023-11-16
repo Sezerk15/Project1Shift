@@ -29,7 +29,7 @@ while (playAgain)
     //BAŞLAMA
     Console.Clear();
     Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-    Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
+    Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}               Digits left:");
     Console.WriteLine($"  + - - - +                                         {unusedDigits}");
     Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
     Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -125,7 +125,7 @@ while (playAgain)
 
         Console.Clear();
         Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-        Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
+        Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}               Digits left:");
         Console.WriteLine($"  + - - - +                                         {unusedDigits}");
         Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
         Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -204,7 +204,7 @@ while (playAgain)
 
             Console.Clear();
             Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-            Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}               Digits left:");
+            Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}               Digits left:");
             Console.WriteLine($"  + - - - +                                         {unusedDigits}");
             Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
             Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -270,7 +270,7 @@ while (playAgain)
             {
                 Console.Clear();
                 Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-                Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}");
+                Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}");
                 Console.WriteLine($"  + - - - +");
                 Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
                 Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -376,7 +376,7 @@ while (playAgain)
             
             Console.Clear();
             Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-            Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}            ");
+            Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}            ");
             Console.WriteLine($"  + - - - +                                       ");
             Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
             Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -824,7 +824,7 @@ while (playAgain)
             
             Console.Clear();
             Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-            Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}             ");
+            Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}             ");
             Console.WriteLine($"  + - - - +                                         ");
             Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
             Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -840,7 +840,7 @@ while (playAgain)
 
         Console.Clear();
         Console.WriteLine($"------------------ Round {roundCount} ------------------\n");
-        Console.WriteLine($"    1 2 3          Turn : {turnCounter} / {turnName}");
+        Console.WriteLine($"    4 5 6          Turn : {turnCounter} / {turnName}");
         Console.WriteLine($"  + - - - + ");
         Console.WriteLine($"1 | {(AA != 0 ? AA : " ")} {(AB != 0 ? AB : " ")} {(AC != 0 ? AC : " ")} |        Board Score    : {boardScore}        ");
         Console.WriteLine($"2 | {(BA != 0 ? BA : " ")} {(BB != 0 ? BB : " ")} {(BC != 0 ? BC : " ")} |                                 ");
@@ -898,5 +898,5 @@ while (playAgain)
     }
     Console.CursorVisible = true;
 
-    playAgain = false;
+    if (!selectedButton) playAgain = false;
 }
